@@ -11,7 +11,10 @@ EX_GRAPH2 = {0: set([1,4,5]), 1: set([2,6]), 2: set([3,7]), 3: set([7]), 4:set([
 
 
 def make_complete_graph(num_nodes):
-#This function takes a number of nodes and returns a complete graph with that number of nodes
+    """
+    This function takes a number and returns a complete graph with that number of nodes
+    
+    """
     complete = {}
     for nodes in range(0, num_nodes):
         lista = range(num_nodes)
@@ -19,7 +22,11 @@ def make_complete_graph(num_nodes):
         complete[nodes] = set(lista)
     return complete    
 def compute_in_degrees(digraph):
-#This function takes a digraph and returns a dictionary with the nodes and each of their own in degrees
+    """
+
+    This function takes a digraph and returns a dictionary with the nodes and each of their own in degrees
+
+    """
     in_degrees = {}
     for key in (digraph):
         total = 0
@@ -28,7 +35,11 @@ def compute_in_degrees(digraph):
         in_degrees[key] = total
     return in_degrees
 def in_degree_distribution(digraph):
-#This function takesa digraph and returns the distribution of in degrees of the digraph
+    """
+
+    This function takesa digraph and returns the distribution of in degrees of the digraph
+
+    """
     degrees = compute_in_degrees(digraph)
     in_degrees = []
     distribution = {}
